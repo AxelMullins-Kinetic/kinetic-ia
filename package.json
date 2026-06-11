@@ -1,0 +1,13 @@
+{
+  "name": "kinetic-onepager",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pdf": "node scripts/export-pdf.mjs",
+    "pdf:es": "node scripts/export-pdf.mjs es",
+    "pdf:en": "node scripts/export-pdf.mjs en"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.1.0"
+  }
+}
