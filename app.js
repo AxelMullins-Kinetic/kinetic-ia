@@ -2,22 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- MOBILE HAMBURGER MENU ---
   const navToggle = document.getElementById("navToggle");
   const navMenu = document.getElementById("navMenu");
-  const navLinks = document.querySelectorAll(".nav-links a");
 
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
       const isOpen = navMenu.classList.toggle("open");
       navToggle.classList.toggle("open");
       navToggle.setAttribute("aria-expanded", isOpen);
-    });
-
-    // Close menu when clicking on a link
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
-        navToggle.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
     });
   }
 
@@ -112,8 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoplay();
 
   // --- SCROLL REVEAL (INTERSECTION OBSERVER) ---
-  const revealElements = document.querySelectorAll(".risk, .bcard, .dcard, .vp-text, .vp-visual, .details-card-centered");
-  
+  const revealElements = document.querySelectorAll(".risk, .bcard, .dcard");
+
   // Add reveal class to targets
   revealElements.forEach((el) => el.classList.add("reveal"));
 
@@ -133,30 +123,4 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   revealElements.forEach((el) => revealObserver.observe(el));
-
-  // --- ACTIVE NAV LINK CORRESPONDING TO SCROLL POSITION ---
-  const sections = document.querySelectorAll("section[id], header[id]");
-  const activeLinkObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute("id");
-          navLinks.forEach((link) => {
-            const href = link.getAttribute("href");
-            if (href === `#${id}`) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
-        }
-      });
-    },
-    {
-      threshold: 0.3,
-      rootMargin: "-20% 0px -60% 0px" // Focus center area of viewport
-    }
-  );
-
-  sections.forEach((sec) => activeLinkObserver.observe(sec));
 });

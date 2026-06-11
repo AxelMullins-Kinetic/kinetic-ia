@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="favicon-corp.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://js.hsforms.net" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
       rel="stylesheet"
@@ -43,14 +44,6 @@
 
         <!-- Nav Links & Andersen Logo Container -->
         <div class="nav-menu" id="navMenu">
-          <!-- <ul class="nav-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#desafio">El Desafío</a></li>
-          <li><a href="#propuesta">Propuesta</a></li>
-          <li><a href="#framework">Framework</a></li>
-          <li><a href="#beneficios">Beneficios</a></li>
-          <li><a href="#diferencial">Por qué Kinetic</a></li>
-        </ul> -->
           <div class="andersen">
             <img
               class="andersen-logo"
@@ -77,19 +70,12 @@
           potenciadas por Inteligencia Artificial.
         </p>
 
-        <a class="cta" href="#desafio" style="position: relative; z-index: 2">
+        <a class="cta" href="#desafio">
           Hablemos sobre tu transformación en IA
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
         </a>
-        <!-- <p class="det">Gobernanza, talento, automatización y agentes inteligentes para escalar con seguridad, productividad y resultados medibles.</p> -->
-        <!-- <div class="hero-strip">
-        <span class="chip"><b>Estrategia</b></span>
-        <span class="chip"><b>Talento</b></span>
-        <span class="chip"><b>Gobernanza</b></span>
-        <span class="chip"><b>Agentes Inteligentes</b></span>
-      </div> -->
       </div>
     </header>
 
@@ -102,7 +88,6 @@
             >Es gobernarla antes que se convierta en un riesgo.</span
           >
         </h2>
-        <!-- <p class="lead">Las organizaciones enfrentan una nueva realidad:</p> -->
         <div class="risks">
           <div class="risk">
             <div class="ic">
@@ -154,33 +139,15 @@
       </div>
     </section>
 
-    <!-- PROPUESTA DE VALOR -->
-    <!-- <section class="vp" id="propuesta">
-    <div class="wrap">
-      <div class="grid">
-        <div class="vp-text">
-          <span class="eyebrow">Propuesta de valor</span>
-          <h2 class="sec">Evolucionamos tu empresa hacia un modelo <span class="hot">AI-Ready</span>.</h2>
-          <p class="lead">Diseñamos e implementamos el marco necesario para que la Inteligencia Artificial genere impacto real en el negocio de forma segura, escalable y sostenible.</p>
-        </div>
-        <div class="vp-visual">
-          <div class="big">AI<small>Ready · de la estrategia a la operación</small></div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
     <!-- SERVICIOS / ORBIT -->
     <section class="servicios" id="framework">
       <div class="wrap">
         <div class="head">
           <span class="eyebrow">El framework</span>
-          <!-- <h2 class="sec">Kinetic AI Transformation Framework</h2> -->
           <h2 class="sec">
             Evolucionamos tu empresa hacia un modelo
             <span class="hot">AI-Ready</span>.
           </h2>
-          <!-- <p class="lead">Cinco capacidades que orbitan un mismo núcleo de inteligencia. Un recorrido continuo: descubrir, gobernar, capacitar, potenciar y escalar.</p> -->
         </div>
 
         <div class="stage">
@@ -226,26 +193,10 @@
             <path class="connector" d="M500,430 L285,718"></path>
             <path class="connector" d="M500,430 L152,335"></path>
             <path class="flow" d="M500,430 L500,118"></path>
-            <path
-              class="flow"
-              d="M500,430 L848,335"
-              style="animation-delay: 0.8s"
-            ></path>
-            <path
-              class="flow"
-              d="M500,430 L715,718"
-              style="animation-delay: 1.6s"
-            ></path>
-            <path
-              class="flow"
-              d="M500,430 L285,718"
-              style="animation-delay: 2.4s"
-            ></path>
-            <path
-              class="flow"
-              d="M500,430 L152,335"
-              style="animation-delay: 3.2s"
-            ></path>
+            <path class="flow" d="M500,430 L848,335"></path>
+            <path class="flow" d="M500,430 L715,718"></path>
+            <path class="flow" d="M500,430 L285,718"></path>
+            <path class="flow" d="M500,430 L152,335"></path>
 
             <circle
               class="glow"
@@ -308,7 +259,7 @@
           </div>
 
           <!-- 1 · Descubrir / AI Scan (top) -->
-          <div class="node svc" style="left: 50%; top: 13.7%">
+          <div class="node svc svc-scan">
             <div class="svc-card">
               <div class="svc-top">
                 <div class="svc-ic">
@@ -331,7 +282,7 @@
           </div>
 
           <!-- 2 · Gobernar / AI Governance (right-upper) -->
-          <div class="node svc" style="left: 84.8%; top: 39%">
+          <div class="node svc svc-governance">
             <div class="svc-card">
               <div class="svc-top">
                 <div class="svc-ic">
@@ -355,7 +306,7 @@
           </div>
 
           <!-- 3 · Capacitar / AI Training (right-lower) -->
-          <div class="node svc" style="left: 71.5%; top: 83.5%">
+          <div class="node svc svc-training">
             <div class="svc-card">
               <div class="svc-top">
                 <div class="svc-ic">
@@ -380,7 +331,7 @@
           </div>
 
           <!-- 4 · Potenciar / AI Talent (left-lower) -->
-          <div class="node svc" style="left: 28.5%; top: 83.5%">
+          <div class="node svc svc-talent">
             <div class="svc-card">
               <div class="svc-top">
                 <div class="svc-ic">
@@ -404,7 +355,7 @@
           </div>
 
           <!-- 5 · Escalar / Agentic AI (left-upper) -->
-          <div class="node svc" style="left: 15.2%; top: 39%">
+          <div class="node svc svc-agentic">
             <div class="svc-card">
               <div class="svc-top">
                 <div class="svc-ic">
@@ -694,40 +645,8 @@
           Ayudamos a las organizaciones a convertir la Inteligencia Artificial
           en una ventaja competitiva real.
         </p>
-        <!-- <div class="formula">
-        <span class="term">Estrategia</span><span class="plus">+</span>
-        <span class="term">Talento</span><span class="plus">+</span>
-        <span class="term">Gobernanza</span><span class="plus">+</span>
-        <span class="term">Agentes Inteligentes</span>
-      </div> -->
-        <!-- <a
-          class="cta"
-          href="https://kinetic-corp.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hablemos sobre tu transformación en IA
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
-        </a> -->
-        <script
-          src="https://js.hsforms.net/forms/embed/8274301.js"
-          defer
-        ></script>
         <div
           class="hs-form-frame"
-          style="
-            width: 100%;
-            max-width: 75%;
-            margin: 0 auto;
-            background-color: #fff;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 20px;
-            overflow: hidden;
-            font-family: 'Poppins', sans-serif !important;
-          "
           data-region="na1"
           data-form-id="5ab18839-223e-4458-b93f-868541e57d03"
           data-portal-id="8274301"
@@ -757,18 +676,7 @@
       </div>
     </footer>
 
-    <script src="app.js"></script>
-    <script
-      charset="utf-8"
-      type="text/javascript"
-      src="//js.hsforms.net/forms/embed/v2.js"
-    ></script>
-    <!-- <script>
-      hbspt.forms.create({
-        portalId: "8274301",
-        formId: "567896b2-d9df-4950-82f1-d4715b95abdd",
-        region: "na1",
-      });
-    </script> -->
+    <script src="app.js" defer></script>
+    <script src="https://js.hsforms.net/forms/embed/8274301.js" defer></script>
   </body>
 </html>

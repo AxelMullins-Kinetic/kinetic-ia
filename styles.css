@@ -75,13 +75,6 @@ h2.sec {
   font-size: clamp(28px, 4.2vw, 46px);
   margin-top: 12px;
 }
-.lead {
-  color: var(--txt-70);
-  font-size: clamp(16px, 1.4vw, 19px);
-  max-width: 760px;
-  margin-top: 16px;
-  line-height: 1.6;
-}
 .hot {
   color: var(--brand);
 }
@@ -147,24 +140,6 @@ section {
   align-items: center;
   gap: 32px;
 }
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  list-style: none;
-}
-.nav-links a {
-  color: var(--txt-70);
-  font-family: var(--display);
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: var(--transition);
-}
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--brand);
-}
 .andersen {
   display: flex;
   align-items: center;
@@ -202,8 +177,6 @@ section {
   padding-bottom: clamp(60px, 10vh, 120px);
   overflow: hidden;
   min-height: 100vh;
-  background: radial-gradient(circle at 75% 30%, rgba(255, 102, 0, 0.12), transparent 45%),
-              radial-gradient(circle at 25% 80%, rgba(255, 102, 0, 0.04), transparent 50%);
   background-image: url("bg-hero.jpg");
   background-size: cover;
   background-position: center;
@@ -214,7 +187,8 @@ section {
   align-items: center;
 }
 .hero .wrap {
-  width: 100%;}
+  width: 100%;
+}
 .hero-glow {
   position: absolute;
   top: 0;
@@ -222,7 +196,6 @@ section {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 70%);
-  /* filter: blur(60px); */
   pointer-events: none;
   z-index: 1;
 }
@@ -253,49 +226,10 @@ section {
   position: relative;
   z-index: 2;
 }
-.hero .det {
-  color: var(--txt-55);
-  font-size: clamp(15px, 1.5vw, 17px);
-  margin-top: 16px;
-  max-width: 720px;
-  line-height: 1.6;
+.hero .cta {
   position: relative;
   z-index: 2;
 }
-.hero-strip {
-  margin-top: 36px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  position: relative;
-  z-index: 2;
-}
-.chip {
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  color: var(--txt-70);
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 999px;
-  padding: 8px 18px;
-  transition: var(--transition);
-}
-.chip b {
-  color: var(--txt-70);
-  font-weight: 500;
-  transition: var(--transition);
-}
-.chip:hover {
-  border-color: var(--line-active);
-  background: rgba(255, 102, 0, 0.05);
-  transform: translateY(-2px);
-}
-.chip:hover b {
-  color: var(--brand);
-}
-
 
 /* ---------- LOGOS MARQUEE ---------- */
 .logos {
@@ -426,46 +360,6 @@ section {
   font-weight: 500;
 }
 
-/* ---------- PROPUESTA (VP) ---------- */
-.vp {
-  background: radial-gradient(70% 90% at 20% 50%, rgba(255, 102, 0, 0.08), transparent 60%);
-}
-.vp .grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
-  align-items: center;
-}
-.vp h2.sec {
-  font-size: clamp(26px, 3.8vw, 42px);
-}
-.vp-visual {
-  display: flex;
-  justify-content: center;
-}
-.vp .big {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: clamp(64px, 10vw, 110px);
-  line-height: 0.85;
-  letter-spacing: -0.05em;
-  color: var(--brand);
-  text-shadow: 0 0 40px rgba(255, 102, 0, 0.15);
-  border-left: 2px solid var(--line-active);
-  padding-left: 24px;
-}
-.vp .big small {
-  display: block;
-  font-size: clamp(13px, 1.2vw, 15px);
-  line-height: clamp(13px, 1.2vw, 15px);
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--txt-55);
-  font-weight: 600;
-  margin-top: 14px;
-  font-family: var(--sans);
-}
-
 /* ---------- SERVICIOS / ORBIT (PENTAGON INTERACTIVO) ---------- */
 .servicios {
   background: linear-gradient(180deg, var(--bg-3), var(--bg));
@@ -475,10 +369,6 @@ section {
   text-align: center;
   max-width: 760px;
   margin: 0 auto 40px;
-}
-.servicios .head .lead {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ── Stage container ── */
@@ -543,6 +433,11 @@ section {
   80%  { opacity: 0.6; }
   100% { stroke-dashoffset: 0; opacity: 0; }
 }
+/* Staggered delay per consecutive flow path */
+.flow + .flow { animation-delay: 0.8s; }
+.flow + .flow + .flow { animation-delay: 1.6s; }
+.flow + .flow + .flow + .flow { animation-delay: 2.4s; }
+.flow + .flow + .flow + .flow + .flow { animation-delay: 3.2s; }
 
 /* Glow dots at node tips */
 .glow {
@@ -613,6 +508,12 @@ section {
 .svc {
   z-index: 5;
 }
+/* Pentagon vertex positions (match SVG connector endpoints) */
+.svc-scan       { left: 50%;   top: 13.7%; }
+.svc-governance { left: 84.8%; top: 39%; }
+.svc-training   { left: 71.5%; top: 83.5%; }
+.svc-talent     { left: 28.5%; top: 83.5%; }
+.svc-agentic    { left: 15.2%; top: 39%; }
 .svc-card {
   width: 284px;
   background: var(--card);
@@ -678,27 +579,31 @@ section {
   line-height: 1.5;
 }
 
-/* ---------- BENEFICIOS ---------- */
+/* ---------- BENEFICIOS — light mode ---------- */
 .cols3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 48px;
 }
+.beneficios {
+  background: #fafafa;
+}
+.beneficios h2 {
+  color: #111111;
+}
 .bcard {
-  background: var(--card);
-  border: 1px solid var(--line);
+  background: #f6f6f6;
+  border: 1px solid #e0e0e0;
   border-radius: 18px;
   padding: 36px 28px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   transition: var(--transition);
 }
 .bcard:hover {
   transform: translateY(-6px);
-  border-color: var(--line-active);
-  background: var(--card-hover);
-  box-shadow: 0 12px 35px rgba(255, 102, 0, 0.04);
+  border-color: var(--brand);
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(255, 102, 0, 0.08);
 }
 .bcard .ic {
   width: 50px;
@@ -732,6 +637,7 @@ section {
   font-size: clamp(19px, 1.8vw, 22px);
   letter-spacing: -0.02em;
   margin-bottom: 20px;
+  color: #111111;
 }
 .bcard ul {
   list-style: none;
@@ -743,7 +649,7 @@ section {
   display: flex;
   gap: 12px;
   font-size: 14.5px;
-  color: var(--txt-70);
+  color: #444444;
   line-height: 1.45;
 }
 .bcard li::before {
@@ -756,36 +662,6 @@ section {
   flex-shrink: 0;
   box-shadow: 0 0 8px rgba(255, 102, 0, 0.8);
 }
-/* ---------- BENEFICIOS — light mode ---------- */
-.beneficios {
-  background: #fafafa;
-}
-.beneficios h2 {
-  color: #111111;
-}
-.bcard {
-  background: #f6f6f6;
-  border: 1px solid #e0e0e0;
-  border-radius: 18px;
-  padding: 36px 28px;
-  transition: var(--transition);
-}
-.bcard:hover {
-  transform: translateY(-6px);
-  border-color: #ff6600;          /* naranja al hover */
-  background: #ffffff;
-  box-shadow: 0 12px 35px rgba(255, 102, 0, 0.08);
-}
-.bcard h3 {
-  color: #111111;                 /* negro título */
-  /* resto igual */
-}
-.bcard li {
-  color: #444444;                 /* gris oscuro legible */
-  /* resto igual */
-}
-/* .ic, svg, li::before → sin cambios, el naranja sigue igual */
-
 /* ---------- DIFERENCIAL ---------- */
 .diff {
   background: linear-gradient(180deg, var(--bg), var(--bg-2));
@@ -864,28 +740,14 @@ section {
   margin: 20px auto 0;
   line-height: 1.6;
 }
-.formula {
-  margin-top: 36px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px 18px;
-  align-items: center;
-}
-.formula .term {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(15px, 1.6vw, 18px);
-  color: var(--txt);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--line);
-  padding: 6px 16px;
-  border-radius: 999px;
-}
-.formula .plus {
-  color: var(--brand);
-  font-weight: 700;
-  font-size: 20px;
+.hs-form-frame {
+  width: 100%;
+  max-width: 75%;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: var(--display) !important;
 }
 .cta {
   margin-top: 48px;
@@ -956,11 +818,6 @@ footer .wrap {
   width: auto;
   opacity: 0.6;
 }
-.footer-right .sep {
-  width: 1px;
-  height: 14px;
-  background: var(--line);
-}
 
 /* ---------- RESPONSIVE MEDIA QUERIES ---------- */
 
@@ -1010,18 +867,7 @@ footer .wrap {
   .nav-menu.open {
     right: 0;
   }
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
-    width: 100%;
-  }
-  .nav-links a {
-    font-size: 18px;
-    width: 100%;
-    display: block;
-  }
-  
+
   /* Hamburger animation */
   .nav-toggle.open .bar:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
@@ -1036,17 +882,6 @@ footer .wrap {
   /* Grid layout overrides */
   .risks {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .vp .grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .vp .big {
-    border-left: none;
-    border-top: 2px solid var(--line-active);
-    padding-left: 0;
-    padding-top: 20px;
-    display: inline-block;
   }
   .cols3 {
     grid-template-columns: 1fr;
@@ -1086,20 +921,8 @@ footer .wrap {
   .risks {
     grid-template-columns: 1fr;
   }
-  .hero-strip {
-    gap: 8px;
-  }
-  .chip {
-    padding: 6px 14px;
-    font-size: 12px;
-  }
-  .formula {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .formula .plus {
-    transform: rotate(90deg);
-    margin: 4px 0;
+  .hs-form-frame {
+    max-width: 100%;
   }
   footer .wrap {
     flex-direction: column;
@@ -1110,8 +933,5 @@ footer .wrap {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-  }
-  .footer-right .sep {
-    display: none;
   }
 }
