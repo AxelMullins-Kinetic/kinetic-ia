@@ -45,19 +45,34 @@
 /* Hero = portada */
 .hero {
   background-attachment: scroll; /* fixed se rompe en PDF */
-  min-height: 88vh;
-  padding-top: 60px;
+  min-height: 86vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
   break-after: page;
 }
 
 /* Una sección por página; logos acompañan a la sección anterior */
 section {
   break-before: page;
-  padding: 48px 0;
+  padding: 36px 0;
 }
 .logos {
   break-before: auto;
-  padding: 36px 0;
+  padding: 28px 0;
+}
+
+/* Beneficios (fondo claro): estirar para que no quede banda negra al pie.
+ * 100vh = alto de página en print; -8px evita desbordar a una página extra. */
+.beneficios {
+  min-height: calc(100vh - 8px);
+}
+
+/* A4 apaisado: el pentágono completo debe entrar en la altura de página */
+.servicios .head {
+  margin-bottom: 12px;
+}
+.stage {
+  max-width: 720px;
 }
 
 /* No cortar tarjetas ni el pentágono entre páginas */

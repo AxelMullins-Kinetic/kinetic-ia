@@ -20,7 +20,7 @@ try {
 
   for (const lang of langs) {
     const page = await browser.newPage();
-    await page.setViewport({ width: 1280, height: 900 });
+    await page.setViewport({ width: 1400, height: 990 });
     await page.goto(pathToFileURL(path.join(root, "index.html")).href, {
       waitUntil: "networkidle0",
       timeout: 60_000,
@@ -57,7 +57,13 @@ try {
     await page.evaluate(() => document.fonts.ready);
 
     const out = path.join(root, "dist", `kinetic-ai-transformation-${lang}.pdf`);
-    await page.pdf({ path: out, format: "A4", printBackground: true, scale: 0.8 });
+    await page.pdf({
+      path: out,
+      format: "A4",
+      landscape: true,
+      printBackground: true,
+      scale: 0.8,
+    });
     console.log(`OK → ${path.relative(root, out)}`);
     await page.close();
   }
