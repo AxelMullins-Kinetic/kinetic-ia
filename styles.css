@@ -749,6 +749,17 @@ section {
   overflow: hidden;
   font-family: var(--display) !important;
 }
+/* Bloque visible solo en el export PDF (pdf.css lo muestra) */
+.pdf-only {
+  display: none;
+}
+.pdf-contact {
+  margin-top: 16px;
+  color: var(--txt-55);
+  font-family: var(--display);
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
 .cta {
   margin-top: 48px;
   display: inline-flex;
