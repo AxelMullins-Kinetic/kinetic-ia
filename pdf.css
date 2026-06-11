@@ -1,0 +1,82 @@
+/* ============================================================
+ * pdf.css — inyectado solo por scripts/export-pdf.mjs.
+ * NO linkear desde index.html.
+ * ============================================================ */
+
+/* Fuera del PDF: form, hamburguesa, máscaras del marquee, duplicados del loop */
+.nav-toggle,
+.hs-form-frame,
+.logos-fade-left,
+.logos-fade-right,
+.logo-item[aria-hidden="true"] {
+  display: none !important;
+}
+
+/* Bloque de contacto exclusivo del PDF */
+.pdf-only {
+  display: block !important;
+}
+
+/* Congelar toda animación/transición */
+*,
+*::before,
+*::after {
+  animation: none !important;
+  transition: none !important;
+}
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.flow {
+  opacity: 0 !important; /* puntos de flujo a mitad de camino se ven como glitch */
+}
+
+/* Nav estática: encabezado de la portada, no se repite por página */
+.nav {
+  position: static;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* Hero = portada */
+.hero {
+  background-attachment: scroll; /* fixed se rompe en PDF */
+  min-height: 88vh;
+  padding-top: 60px;
+  break-after: page;
+}
+
+/* Una sección por página; logos acompañan a la sección anterior */
+section {
+  break-before: page;
+  padding: 48px 0;
+}
+.logos {
+  break-before: auto;
+  padding: 36px 0;
+}
+
+/* No cortar tarjetas ni el pentágono entre páginas */
+.risk,
+.bcard,
+.dcard,
+.svc-card,
+.stage,
+footer .wrap {
+  break-inside: avoid;
+}
+
+/* Marquee → grilla estática centrada */
+.logos-track {
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 32px 48px;
+}
+.logo-item {
+  filter: grayscale(1) brightness(1.6) opacity(0.7);
+}
