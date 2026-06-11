@@ -1,36 +1,774 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinetic Corp · Estrategia IA 2026</title>
-  <meta name="description" content="Kinetic Corp — Estrategia de posicionamiento IA 2026. Donde la IA entra en producción. A member of Andersen Consulting." />
-  <link rel="icon" type="image/png" href="favicon-corp.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinetic AI Transformation · Propuesta de Valor</title>
+    <meta
+      name="description"
+      content="Estrategia de posicionamiento de IA de Kinetic Corp. Gobernanza, talento, automatización y agentes inteligentes para escalar con seguridad y resultados medibles."
+    />
+    <link rel="icon" type="image/png" href="favicon-corp.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="wrap">
+        <a class="brand" href="#" aria-label="Kinetic Corp Home">
+          <img
+            class="brand-logo"
+            src="kinetic-corp-nw.svg"
+            alt="Kinetic Corp"
+          />
+        </a>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+        <!-- Hamburger Icon for Mobile -->
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Kinetic Corp">
-      <img class="brand-logo" src="kinetic-corp-nw.svg" alt="Kinetic Corp" />
-    </a>
-    <div class="header-right">
-      <img class="andersen-logo" src="andersen-consulting.png" alt="A member of Andersen Consulting" />
-      <div class="lang-toggle" role="group" aria-label="Language / Idioma">
-        <button type="button" data-lang="es">ES</button>
-        <button type="button" data-lang="en">EN</button>
+        <!-- Nav Links & Andersen Logo Container -->
+        <div class="nav-menu" id="navMenu">
+          <!-- <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#desafio">El Desafío</a></li>
+          <li><a href="#propuesta">Propuesta</a></li>
+          <li><a href="#framework">Framework</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#diferencial">Por qué Kinetic</a></li>
+        </ul> -->
+          <div class="andersen">
+            <img
+              class="andersen-logo"
+              src="andersen-consulting.png"
+              alt="A Member of Andersen Consulting"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="inicio">
+      <div class="hero-glow"></div>
+      <div class="wrap">
+        <span class="eyebrow">Kinetic AI Transformation</span>
+        <h1>
+          La IA acelera.<br />La estrategia decide.<br /><span
+            >Kinetic transforma.</span
+          >
+        </h1>
+        <p class="sub">
+          Convertimos organizaciones tradicionales en empresas híbridas
+          potenciadas por Inteligencia Artificial.
+        </p>
+
+        <a class="cta" href="#desafio" style="position: relative; z-index: 2">
+          Hablemos sobre tu transformación en IA
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+        <!-- <p class="det">Gobernanza, talento, automatización y agentes inteligentes para escalar con seguridad, productividad y resultados medibles.</p> -->
+        <!-- <div class="hero-strip">
+        <span class="chip"><b>Estrategia</b></span>
+        <span class="chip"><b>Talento</b></span>
+        <span class="chip"><b>Gobernanza</b></span>
+        <span class="chip"><b>Agentes Inteligentes</b></span>
+      </div> -->
+      </div>
+    </header>
+
+    <!-- PROBLEMA -->
+    <section class="problema" id="desafio">
+      <div class="wrap">
+        <span class="eyebrow">El punto de partida</span>
+        <h2 class="sec">
+          El desafío ya no es adoptar IA.<br /><span class="hot"
+            >Es gobernarla antes que se convierta en un riesgo.</span
+          >
+        </h2>
+        <!-- <p class="lead">Las organizaciones enfrentan una nueva realidad:</p> -->
+        <div class="risks">
+          <div class="risk">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6h13M3 12h13M3 18h9" />
+                <path d="M19 9l3 3-3 3" />
+              </svg>
+            </div>
+            <p>Riesgos regulatorios y de cumplimiento.</p>
+          </div>
+          <div class="risk">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3l9 16H3z" />
+                <path d="M12 10v4M12 17h.01" />
+              </svg>
+            </div>
+            <p>Uso descontrolado de herramientas de IA.</p>
+          </div>
+          <div class="risk">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z" />
+                <path d="M5 5l14 14" />
+              </svg>
+            </div>
+            <p>Exposición de información sensible.</p>
+          </div>
+          <div class="risk">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 18l5-5 4 4 7-8" />
+                <path d="M16 9h4v4" />
+              </svg>
+            </div>
+            <p>Pérdida de competitividad frente a empresas AI-First.</p>
+          </div>
+          <div class="risk">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="9" cy="8" r="3" />
+                <path d="M3.5 19a5.5 5.5 0 0 1 11 0" />
+                <path d="M17 8h4M19 6v4" />
+              </svg>
+            </div>
+            <p>Falta de talento preparado para entornos híbridos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPUESTA DE VALOR -->
+    <!-- <section class="vp" id="propuesta">
+    <div class="wrap">
+      <div class="grid">
+        <div class="vp-text">
+          <span class="eyebrow">Propuesta de valor</span>
+          <h2 class="sec">Evolucionamos tu empresa hacia un modelo <span class="hot">AI-Ready</span>.</h2>
+          <p class="lead">Diseñamos e implementamos el marco necesario para que la Inteligencia Artificial genere impacto real en el negocio de forma segura, escalable y sostenible.</p>
+        </div>
+        <div class="vp-visual">
+          <div class="big">AI<small>Ready · de la estrategia a la operación</small></div>
+        </div>
       </div>
     </div>
-  </header>
+  </section> -->
 
-  <main id="app"><!-- secciones renderizadas por app.js --></main>
+    <!-- SERVICIOS / ORBIT -->
+    <section class="servicios" id="framework">
+      <div class="wrap">
+        <div class="head">
+          <span class="eyebrow">El framework</span>
+          <!-- <h2 class="sec">Kinetic AI Transformation Framework</h2> -->
+          <h2 class="sec">
+            Evolucionamos tu empresa hacia un modelo
+            <span class="hot">AI-Ready</span>.
+          </h2>
+          <!-- <p class="lead">Cinco capacidades que orbitan un mismo núcleo de inteligencia. Un recorrido continuo: descubrir, gobernar, capacitar, potenciar y escalar.</p> -->
+        </div>
 
-  <footer class="site-footer" id="footer"><!-- render por app.js --></footer>
+        <div class="stage">
+          <svg
+            class="bg"
+            viewBox="0 0 1000 860"
+            preserveAspectRatio="xMidYMid meet"
+            aria-hidden="true"
+          >
+            <defs>
+              <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="14"></feGaussianBlur>
+              </filter>
+              <linearGradient id="conn" x1="0" y1="0" x2="1" y2="0">
+                <stop
+                  offset="0%"
+                  stop-color="#FF6600"
+                  stop-opacity=".85"
+                ></stop>
+                <stop
+                  offset="100%"
+                  stop-color="#FF6600"
+                  stop-opacity=".10"
+                ></stop>
+              </linearGradient>
+            </defs>
+            <ellipse class="ring" cx="500" cy="430" rx="430" ry="360"></ellipse>
+            <ellipse class="ring" cx="500" cy="430" rx="300" ry="250"></ellipse>
+            <g class="orbit-rotate">
+              <ellipse
+                class="ring-orbit"
+                cx="500"
+                cy="430"
+                rx="368"
+                ry="308"
+              ></ellipse>
+            </g>
 
-  <script src="app.js"></script>
-</body>
+            <!-- connectors core -> 5 pentagon vertices -->
+            <path class="connector" d="M500,430 L500,118"></path>
+            <path class="connector" d="M500,430 L848,335"></path>
+            <path class="connector" d="M500,430 L715,718"></path>
+            <path class="connector" d="M500,430 L285,718"></path>
+            <path class="connector" d="M500,430 L152,335"></path>
+            <path class="flow" d="M500,430 L500,118"></path>
+            <path
+              class="flow"
+              d="M500,430 L848,335"
+              style="animation-delay: 0.8s"
+            ></path>
+            <path
+              class="flow"
+              d="M500,430 L715,718"
+              style="animation-delay: 1.6s"
+            ></path>
+            <path
+              class="flow"
+              d="M500,430 L285,718"
+              style="animation-delay: 2.4s"
+            ></path>
+            <path
+              class="flow"
+              d="M500,430 L152,335"
+              style="animation-delay: 3.2s"
+            ></path>
+
+            <circle
+              class="glow"
+              cx="500"
+              cy="118"
+              r="8"
+              fill="#FF6600"
+              opacity=".5"
+            ></circle>
+            <circle
+              class="glow"
+              cx="848"
+              cy="335"
+              r="8"
+              fill="#FF6600"
+              opacity=".5"
+            ></circle>
+            <circle
+              class="glow"
+              cx="715"
+              cy="718"
+              r="8"
+              fill="#FF6600"
+              opacity=".5"
+            ></circle>
+            <circle
+              class="glow"
+              cx="285"
+              cy="718"
+              r="8"
+              fill="#FF6600"
+              opacity=".5"
+            ></circle>
+            <circle
+              class="glow"
+              cx="152"
+              cy="335"
+              r="8"
+              fill="#FF6600"
+              opacity=".5"
+            ></circle>
+            <circle
+              class="glow core-pulse"
+              cx="500"
+              cy="430"
+              r="110"
+              fill="#FF6600"
+              opacity=".22"
+            ></circle>
+          </svg>
+
+          <!-- CORE -->
+          <div class="node core">
+            <div class="core-disc">
+              <div class="core-kicker">Humano + IA</div>
+              <div class="core-title">
+                Kinetic AI<br />Transformation<small>AI-Powered</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1 · Descubrir / AI Scan (top) -->
+          <div class="node svc" style="left: 50%; top: 13.7%">
+            <div class="svc-card">
+              <div class="svc-top">
+                <div class="svc-ic">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="8.5"></circle>
+                    <circle cx="12" cy="12" r="3.5"></circle>
+                    <path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="svc-verb">Descubrir</div>
+                  <div class="svc-name">AI Scan</div>
+                </div>
+              </div>
+              <div class="svc-desc">
+                Mapeamos el uso real de IA, detectamos riesgos y definimos
+                oportunidades de alto impacto.
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 · Gobernar / AI Governance (right-upper) -->
+          <div class="node svc" style="left: 84.8%; top: 39%">
+            <div class="svc-card">
+              <div class="svc-top">
+                <div class="svc-ic">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"
+                    ></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="svc-verb">Gobernar</div>
+                  <div class="svc-name">AI Governance</div>
+                </div>
+              </div>
+              <div class="svc-desc">
+                Políticas, marcos de decisión, compliance y ética para una
+                adopción responsable.
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 · Capacitar / AI Training (right-lower) -->
+          <div class="node svc" style="left: 71.5%; top: 83.5%">
+            <div class="svc-card">
+              <div class="svc-top">
+                <div class="svc-ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 4l9 4-9 4-9-4 9-4z"></path>
+                    <path
+                      d="M6.5 10v4.5c0 1.4 2.5 2.5 5.5 2.5s5.5-1.1 5.5-2.5V10"
+                    ></path>
+                    <path d="M21 8v5"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="svc-verb">Capacitar</div>
+                  <div class="svc-name">AI Training</div>
+                </div>
+              </div>
+              <div class="svc-desc">
+                Formación práctica para líderes y equipos que necesitan operar
+                en entornos híbridos.
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 · Potenciar / AI Talent (left-lower) -->
+          <div class="node svc" style="left: 28.5%; top: 83.5%">
+            <div class="svc-card">
+              <div class="svc-top">
+                <div class="svc-ic">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="9" cy="8" r="3"></circle>
+                    <path d="M3.5 19a5.5 5.5 0 0 1 11 0"></path>
+                    <circle cx="17.5" cy="9.5" r="2.2"></circle>
+                    <path d="M16 19a4 4 0 0 1 5.5-3.7"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="svc-verb">Potenciar</div>
+                  <div class="svc-name">AI Talent</div>
+                </div>
+              </div>
+              <div class="svc-desc">
+                Acceso a especialistas y evaluación de capacidades para
+                construir equipos preparados para la nueva era.
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 · Escalar / Agentic AI (left-upper) -->
+          <div class="node svc" style="left: 15.2%; top: 39%">
+            <div class="svc-card">
+              <div class="svc-top">
+                <div class="svc-ic">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="2.4"></circle>
+                    <circle cx="5" cy="6" r="2"></circle>
+                    <circle cx="19" cy="6" r="2"></circle>
+                    <circle cx="6" cy="19" r="2"></circle>
+                    <circle cx="18" cy="19" r="2"></circle>
+                    <path
+                      d="M10.3 10.6L6.4 7.4M13.7 10.6l3.9-3.2M10.6 13.6l-3.2 3.8M13.4 13.6l3.2 3.8"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="svc-verb">Escalar</div>
+                  <div class="svc-name">Agentic AI</div>
+                </div>
+              </div>
+              <div class="svc-desc">
+                Diseño e implementación de agentes inteligentes y
+                automatizaciones con retorno medible.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="beneficios" id="beneficios">
+      <div class="wrap">
+        <span class="eyebrow">Resultados</span>
+        <h2 class="sec">
+          De la experimentación al <span class="hot">impacto empresarial</span>
+        </h2>
+        <div class="cols3">
+          <div class="bcard">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z" />
+                <path d="M12 11v4M12 8h.01" />
+              </svg>
+            </div>
+            <h3>Blindaje Operativo</h3>
+            <ul>
+              <li>Protección de información crítica</li>
+              <li>Gestión de riesgos</li>
+              <li>Cumplimiento y trazabilidad</li>
+            </ul>
+          </div>
+          <div class="bcard">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 18l5-5 4 4 7-8" />
+                <path d="M16 9h4v4" />
+              </svg>
+            </div>
+            <h3>Productividad Exponencial</h3>
+            <ul>
+              <li>Procesos más ágiles</li>
+              <li>Equipos aumentados por IA</li>
+              <li>Menos tareas repetitivas</li>
+            </ul>
+          </div>
+          <div class="bcard">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="12" cy="12" r="1.4" fill="#FF6600" stroke="none" />
+              </svg>
+            </div>
+            <h3>Ventaja Competitiva</h3>
+            <ul>
+              <li>Mayor velocidad de ejecución</li>
+              <li>Menores costos operativos</li>
+              <li>Mejor toma de decisiones</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAL -->
+    <section class="diff" id="diferencial">
+      <div class="wrap">
+        <span class="eyebrow">El diferencial</span>
+        <h2 class="sec">¿Por qué Kinetic?</h2>
+        <div class="cols3">
+          <div class="dcard">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="9" r="6" />
+                <path d="M9 13.5L7 21l5-2.5L17 21l-2-7.5" />
+                <path d="M9.5 9l1.7 1.7L15 7" />
+              </svg>
+            </div>
+            <h3>Experiencia comprobada</h3>
+            <p>
+              Implementamos soluciones de IA y automatización para
+              organizaciones globales de sectores como medios, banca y gobierno.
+            </p>
+          </div>
+          <div class="dcard">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3l9 5-9 5-9-5 9-5z" />
+                <path d="M3 13l9 5 9-5" />
+              </svg>
+            </div>
+            <h3>Metodología propia</h3>
+            <p>
+              Nuestro <span class="hot-bold">Hybrid Method</span> permite una
+              adopción segura, escalable y auditable.
+            </p>
+          </div>
+          <div class="dcard">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path
+                  d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"
+                />
+              </svg>
+            </div>
+            <h3>Capacidad internacional</h3>
+            <p>
+              Respaldados por una red global con presencia en más de
+              <span class="hot-bold">170 países</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGOS: infinite marquee carousel -->
+    <section class="logos">
+      <div class="logos-fade-left"></div>
+      <div class="logos-fade-right"></div>
+      <div class="logos-track-wrap">
+        <div class="logos-track">
+          <img class="logo-item" src="img/logos/AGD.svg" alt="AGD" />
+          <img
+            class="logo-item"
+            src="img/logos/Associated Press.svg"
+            alt="Associated Press"
+          />
+          <img class="logo-item" src="img/logos/Bacar.png" alt="Bacar" />
+          <img
+            class="logo-item"
+            src="img/logos/Caja de Jubilaciones.png"
+            alt="Caja de Jubilaciones"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Ciudad de General Deheza.svg"
+            alt="Ciudad de General Deheza"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Coca Cola Andina.svg"
+            alt="Coca-Cola Andina"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Dopazo y Revanna.svg"
+            alt="Dopazo y Revanna"
+          />
+          <img class="logo-item" src="img/logos/GEA.svg" alt="GEA" />
+          <img
+            class="logo-item"
+            src="img/logos/Gobierno De La Provincia De Cordoba.svg"
+            alt="Gobierno de Córdoba"
+          />
+          <img class="logo-item" src="img/logos/Mobsta.svg" alt="Mobsta" />
+          <img
+            class="logo-item"
+            src="img/logos/Municipalidad De Córdoba.svg"
+            alt="Municipalidad de Córdoba"
+          />
+          <img class="logo-item" src="img/logos/Penma.svg" alt="Penma" />
+          <img
+            class="logo-item"
+            src="img/logos/Santa Rosa.svg"
+            alt="Santa Rosa"
+          />
+          <img class="logo-item" src="img/logos/Servelec.png" alt="Servelec" />
+          <!-- Duplicated for seamless loop -->
+          <img
+            class="logo-item"
+            src="img/logos/AGD.svg"
+            alt="AGD"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Associated Press.svg"
+            alt="Associated Press"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Bacar.png"
+            alt="Bacar"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Caja de Jubilaciones.png"
+            alt="Caja de Jubilaciones"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Ciudad de General Deheza.svg"
+            alt="Ciudad de General Deheza"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Coca Cola Andina.svg"
+            alt="Coca-Cola Andina"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Dopazo y Revanna.svg"
+            alt="Dopazo y Revanna"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/GEA.svg"
+            alt="GEA"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Gobierno De La Provincia De Cordoba.svg"
+            alt="Gobierno de Córdoba"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Mobsta.svg"
+            alt="Mobsta"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Municipalidad De Córdoba.svg"
+            alt="Municipalidad de Córdoba"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Penma.svg"
+            alt="Penma"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Santa Rosa.svg"
+            alt="Santa Rosa"
+            aria-hidden="true"
+          />
+          <img
+            class="logo-item"
+            src="img/logos/Servelec.png"
+            alt="Servelec"
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="cierre">
+      <div class="wrap">
+        <h2>
+          IA con propósito.<br /><span class="hot"
+            >Resultados con impacto.</span
+          >
+        </h2>
+        <p>
+          Ayudamos a las organizaciones a convertir la Inteligencia Artificial
+          en una ventaja competitiva real.
+        </p>
+        <!-- <div class="formula">
+        <span class="term">Estrategia</span><span class="plus">+</span>
+        <span class="term">Talento</span><span class="plus">+</span>
+        <span class="term">Gobernanza</span><span class="plus">+</span>
+        <span class="term">Agentes Inteligentes</span>
+      </div> -->
+        <!-- <a
+          class="cta"
+          href="https://kinetic-corp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hablemos sobre tu transformación en IA
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a> -->
+        <script
+          src="https://js.hsforms.net/forms/embed/8274301.js"
+          defer
+        ></script>
+        <div
+          class="hs-form-frame"
+          style="
+            width: 100%;
+            max-width: 75%;
+            margin: 0 auto;
+            background-color: #fff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif !important;
+          "
+          data-region="na1"
+          data-form-id="5ab18839-223e-4458-b93f-868541e57d03"
+          data-portal-id="8274301"
+        ></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrap">
+        <div class="footer-left">
+          <a href="https://kinetic-corp.com" target="_blank">
+            <img
+              class="brand-logo-footer"
+              src="kinetic-corp-nw.svg"
+              alt="Kinetic Corp"
+            />
+          </a>
+        </div>
+        <div class="footer-right">
+          <img
+            class="andersen-logo-footer"
+            src="andersen-consulting.png"
+            alt="A Member of Andersen Consulting"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script
+      charset="utf-8"
+      type="text/javascript"
+      src="//js.hsforms.net/forms/embed/v2.js"
+    ></script>
+    <!-- <script>
+      hbspt.forms.create({
+        portalId: "8274301",
+        formId: "567896b2-d9df-4950-82f1-d4715b95abdd",
+        region: "na1",
+      });
+    </script> -->
+  </body>
 </html>
