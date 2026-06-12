@@ -1,0 +1,335 @@
+/* ============================================================
+ * onepager.css — Kinetic AI Transformation · One-Pager A4 vertical
+ * Estética del sitio (tema oscuro · naranja #FF6600 · Poppins/Inter).
+ * Pensado para una sola página A4 portrait vía scripts/export-onepager.mjs.
+ * ============================================================ */
+
+:root {
+  --bg: #070708;
+  --bg-2: #0d0d10;
+  --brand: #ff6600;
+  --brand-hot: #ff8a33;
+  --line: rgba(255, 255, 255, 0.1);
+  --card: rgba(18, 18, 21, 0.75);
+  --txt: #ffffff;
+  --txt-70: rgba(255, 255, 255, 0.72);
+  --txt-55: rgba(255, 255, 255, 0.55);
+  --display: "Poppins", system-ui, sans-serif;
+  --sans: "Inter", system-ui, sans-serif;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Congelar cualquier animación/transición en el render */
+  animation: none !important;
+  transition: none !important;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- PÁGINA A4 ---------- */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  background: radial-gradient(
+      120% 80% at 80% -10%,
+      rgba(255, 102, 0, 0.16),
+      transparent 60%
+    ),
+    var(--bg);
+  padding: 12mm 12mm 9mm;
+  display: flex;
+  flex-direction: column;
+  gap: 5mm;
+  overflow: hidden;
+}
+
+/* ---------- TIPOGRAFÍA COMÚN ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--brand);
+  font-weight: 600;
+}
+.eyebrow::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand));
+}
+.hot {
+  color: var(--brand);
+}
+.hot-bold {
+  color: var(--brand);
+  font-weight: 700;
+}
+.op-h {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 12px;
+  color: var(--txt);
+  margin-bottom: 5px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---------- HEADER / MEGAFRASE ---------- */
+.op-head-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7mm;
+}
+.op-logo {
+  height: 30px;
+  width: auto;
+}
+.op-andersen {
+  height: 26px;
+  width: auto;
+  opacity: 0.9;
+}
+.mega {
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  font-size: 30px;
+  margin: 6px 0 0;
+}
+.mega span {
+  color: var(--brand);
+}
+.mega-sub {
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--txt-70);
+  max-width: 150mm;
+}
+
+/* ---------- FILAS / BLOQUES ---------- */
+.op-row {
+  display: grid;
+  gap: 5mm;
+}
+.op-row-1 {
+  grid-template-columns: 1fr 1.15fr;
+}
+.op-block {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 5mm;
+  break-inside: avoid;
+}
+
+/* ---------- PROBLEMA + SOLUCIÓN ---------- */
+.op-lead {
+  font-size: 9px;
+  line-height: 1.4;
+  color: var(--txt-70);
+  margin-bottom: 5px;
+}
+.op-risks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 7px;
+}
+.op-risks li {
+  position: relative;
+  padding-left: 13px;
+  font-size: 9px;
+  line-height: 1.35;
+  color: var(--txt);
+}
+.op-risks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+.op-solucion {
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--txt);
+  padding-top: 7px;
+  border-top: 1px solid var(--line);
+}
+.op-solucion-k {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+/* ---------- PRODUCTOS Y SERVICIOS ---------- */
+.op-svcs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 7px;
+}
+.op-svc {
+  padding: 4px 0;
+}
+.op-svcs .op-svc:nth-child(5) {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 6px;
+  margin-top: 2px;
+}
+.op-svc-name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+.op-svc-verb {
+  color: var(--brand);
+}
+.op-svc p {
+  font-size: 8px;
+  line-height: 1.35;
+  color: var(--txt-55);
+}
+
+/* ---------- DIFERENCIAL + MÉTRICAS (3 cols) ---------- */
+.op-cols3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5mm;
+}
+.op-card h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 10px;
+  margin-bottom: 4px;
+  color: var(--txt);
+}
+.op-card p {
+  font-size: 8.5px;
+  line-height: 1.4;
+  color: var(--txt-55);
+}
+.op-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.op-card ul li {
+  position: relative;
+  padding-left: 11px;
+  font-size: 8.5px;
+  line-height: 1.35;
+  color: var(--txt-70);
+}
+.op-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+  background: var(--brand);
+}
+
+/* ---------- CLIENTES ---------- */
+.op-clients {
+  break-inside: avoid;
+}
+.op-clients-label {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--txt-55);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.op-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.op-logos img {
+  height: 20px;
+  max-width: 90px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.8) opacity(0.75);
+}
+
+/* ---------- CONTACTO ---------- */
+.op-contact {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10mm;
+  padding: 5mm;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 102, 0, 0.16),
+    rgba(255, 102, 0, 0.04)
+  );
+  border: 1px solid rgba(255, 102, 0, 0.35);
+  break-inside: avoid;
+}
+.op-contact-label {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brand);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.op-contact-cta strong {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--txt);
+}
+.op-contact-web {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--brand);
+  text-decoration: none;
+  white-space: nowrap;
+}
