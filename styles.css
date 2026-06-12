@@ -235,7 +235,7 @@ section {
 .logos {
   position: relative;
   padding: 36px 0;
-  background: var(--bg);
+  background: linear-gradient(180deg, var(--bg-2), var(--bg));
   overflow: hidden;
 }
 
@@ -300,7 +300,7 @@ section {
   background: linear-gradient(180deg, var(--bg), var(--bg-3));
 }
 .problema h2.sec {
-  max-width: 900px;
+  max-width: 920px;
 }
 .risks {
   display: grid;
