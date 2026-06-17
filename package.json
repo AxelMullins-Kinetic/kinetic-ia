@@ -5,7 +5,10 @@
   "scripts": {
     "pdf": "node scripts/export-pdf.mjs",
     "pdf:es": "node scripts/export-pdf.mjs es",
-    "pdf:en": "node scripts/export-pdf.mjs en"
+    "pdf:en": "node scripts/export-pdf.mjs en",
+    "onepager": "node scripts/export-onepager.mjs",
+    "onepager:es": "node scripts/export-onepager.mjs es",
+    "onepager:en": "node scripts/export-onepager.mjs en"
   },
   "devDependencies": {
     "puppeteer": "^25.1.0"

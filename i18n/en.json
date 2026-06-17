@@ -42,5 +42,12 @@
   "diferencial.card3Text": "Backed by a global network with presence in more than <span class=\"hot-bold\">170 countries</span>.",
   "cierre.title": "AI with purpose.<br /><span class=\"hot\">Results with impact.</span>",
   "cierre.sub": "We help organizations turn Artificial Intelligence into a real competitive advantage.",
-  "cierre.cta": "Let's talk about your AI transformation"
+  "cierre.cta": "Let's talk about your AI transformation",
+  "op.problemaTitle": "Problem & Solution",
+  "op.problemaLead": "The challenge is no longer adopting AI, but governing it before it becomes a risk:",
+  "op.solucionLabel": "Our solution",
+  "op.serviciosTitle": "Products & Services",
+  "op.metricasTitle": "The results we deliver",
+  "op.clientesTitle": "Trusted by",
+  "op.contactoTitle": "Contact"
 }
