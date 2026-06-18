@@ -82,6 +82,12 @@ h2.sec {
   color: var(--brand);
   font-weight: 600;
 }
+/* Términos marcarios (AI First · AI Hybrid · Hybrid AI Method) */
+.brand-term {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--brand-hot);
+}
 section {
   padding: clamp(60px, 8vh, 100px) 0;
   position: relative;
@@ -177,7 +183,7 @@ section {
   padding-bottom: clamp(60px, 10vh, 120px);
   overflow: hidden;
   min-height: 100vh;
-  background-image: url("bg-hero.jpg");
+  background-image: url("img/bg-hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -674,6 +680,8 @@ section {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 .dcard:hover {
   transform: translateY(-6px);
@@ -718,6 +726,37 @@ section {
   font-size: 14.5px;
   color: var(--txt-70);
   line-height: 1.55;
+}
+/* Certificaciones ISO (sellos sobre chip blanco para legibilidad en dark) */
+.dcard-certs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+.cert-badge {
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.cert-badge img {
+  height: 100%;
+  width: auto;
+  display: block;
+  /* Sellos ya procesados a blanco sobre transparente (iso-*-white.png) */
+  opacity: 0.92;
+}
+/* Respaldo Andersen Global */
+.dcard-andersen {
+  margin-top: auto;
+  padding-top: 24px;
+}
+.dcard-andersen img {
+  height: 22px;
+  width: auto;
+  opacity: 0.8;
 }
 
 /* ---------- CIERRE / CTA ---------- */
