@@ -57,7 +57,7 @@ body {
   font-size: clamp(11px, 1.2vw, 13px);
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--brand);
+  color: white;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -179,6 +179,7 @@ section {
 
 /* ---------- HERO ---------- */
 .hero {
+  position: relative; /* confina .hero-glow al hero */
   padding-top: clamp(120px, 16vh, 180px);
   padding-bottom: clamp(60px, 10vh, 120px);
   overflow: hidden;
@@ -194,6 +195,8 @@ section {
 }
 .hero .wrap {
   width: 100%;
+  position: relative;
+  z-index: 2; /* todo el contenido del hero por encima de .hero-glow */
 }
 .hero-glow {
   position: absolute;
