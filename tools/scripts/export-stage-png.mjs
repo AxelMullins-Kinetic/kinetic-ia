@@ -3,7 +3,9 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import puppeteer from "puppeteer";
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+// toolsRoot: pdf.css y salida dist. repoRoot: web (index.html, i18n).
+const toolsRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const repoRoot = path.resolve(toolsRoot, "..");
 const requested = process.argv.slice(2);
 const langs = requested.length ? requested : ["es"];
 
@@ -16,16 +18,16 @@ for (const lang of langs) {
 
 const browser = await puppeteer.launch();
 try {
-  await mkdir(path.join(root, "dist"), { recursive: true });
+  await mkdir(path.join(toolsRoot, "dist"), { recursive: true });
 
   for (const lang of langs) {
     const page = await browser.newPage();
     await page.setViewport({ width: 1400, height: 990, deviceScaleFactor: 4 });
-    await page.goto(pathToFileURL(path.join(root, "index.html")).href, {
+    await page.goto(pathToFileURL(path.join(repoRoot, "index.html")).href, {
       waitUntil: "networkidle0",
       timeout: 60_000,
     });
-    await page.addStyleTag({ path: path.join(root, "pdf.css") });
+    await page.addStyleTag({ path: path.join(toolsRoot, "pdf.css") });
     // Tarjetas con el mismo color pero sólido: su rgba al 75% dejaría
     // traslúcido el texto blanco sobre slides claras.
     await page.addStyleTag({
@@ -40,7 +42,7 @@ try {
 
     if (lang === "en") {
       const dict = JSON.parse(
-        await readFile(path.join(root, "i18n", "en.json"), "utf8")
+        await readFile(path.join(repoRoot, "i18n", "en.json"), "utf8")
       );
       await page.evaluate((dict) => {
         for (const el of document.querySelectorAll("[data-i18n]")) {
@@ -132,9 +134,9 @@ try {
       onWhite
     );
 
-    const out = path.join(root, "dist", `grafico-ai-ready-${lang}.png`);
+    const out = path.join(toolsRoot, "dist", `grafico-ai-ready-${lang}.png`);
     await writeFile(out, Buffer.from(dataUrl.split(",")[1], "base64"));
-    console.log(`OK → ${path.relative(root, out)}`);
+    console.log(`OK → ${path.relative(toolsRoot, out)}`);
     await page.close();
   }
 } finally {

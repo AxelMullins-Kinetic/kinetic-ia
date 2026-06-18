@@ -4,8 +4,8 @@ import { fileURLToPath } from "node:url";
 import puppeteer from "puppeteer";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const logosDir = join(__dirname, "..", "img", "logos");
-const outDir = join(__dirname, "..", "img", "logos-pptx");
+const logosDir = join(__dirname, "..", "..", "img", "logos"); // fuente web
+const outDir = join(__dirname, "..", "assets", "logos-pptx");
 const HEIGHT = 256; // alto de salida en px (el ancho se ajusta solo)
 
 await mkdir(outDir, { recursive: true });

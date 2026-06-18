@@ -8,7 +8,9 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import puppeteer from "puppeteer";
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+// toolsRoot: salida dist. repoRoot: web (index.html, fuente de los SVG).
+const toolsRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const repoRoot = path.resolve(toolsRoot, "..");
 
 // Selector de cada nodo del orbit -> nombre de archivo de salida.
 const ICONS = [
@@ -29,11 +31,11 @@ const BORDER = CHIP * (1 / 32);
 
 const browser = await puppeteer.launch();
 try {
-  await mkdir(path.join(root, "dist", "icons"), { recursive: true });
+  await mkdir(path.join(toolsRoot, "dist", "icons"), { recursive: true });
 
   // 1) Levantar index.html y extraer el markup interno de cada icono.
   const src = await browser.newPage();
-  await src.goto(pathToFileURL(path.join(root, "index.html")).href, {
+  await src.goto(pathToFileURL(path.join(repoRoot, "index.html")).href, {
     waitUntil: "networkidle0",
     timeout: 60_000,
   });
@@ -135,9 +137,9 @@ try {
       onWhite
     );
 
-    const out = path.join(root, "dist", "icons", `chip-${name}.png`);
+    const out = path.join(toolsRoot, "dist", "icons", `chip-${name}.png`);
     await writeFile(out, Buffer.from(dataUrl.split(",")[1], "base64"));
-    console.log(`OK → ${path.relative(root, out)}`);
+    console.log(`OK → ${path.relative(toolsRoot, out)}`);
   }
   await page.close();
 } finally {

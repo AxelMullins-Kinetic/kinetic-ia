@@ -1,0 +1,16 @@
+{
+  "name": "kinetic-onepager-tools",
+  "private": true,
+  "type": "module",
+  "description": "Scripts de generación de imágenes (PNG/PPTX) del onepager. No forma parte del sitio web.",
+  "scripts": {
+    "export:icons": "node scripts/export-svc-icons.mjs",
+    "export:stage": "node scripts/export-stage-png.mjs",
+    "export:risk-icons": "node scripts/export-icons-png.mjs",
+    "export:logos": "node scripts/export-logos-png.mjs",
+    "make:white-iso": "node scripts/make-white-iso.mjs"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.1.0"
+  }
+}

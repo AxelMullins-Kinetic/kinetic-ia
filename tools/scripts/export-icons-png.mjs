@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import puppeteer from "puppeteer";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const iconsDir = join(__dirname, "..", "img", "icons-pptx");
+const iconsDir = join(__dirname, "..", "assets", "icons-pptx");
 const SIZE = 512; // px de salida (transparente)
 
 const files = (await readdir(iconsDir)).filter((f) => f.endsWith(".svg"));

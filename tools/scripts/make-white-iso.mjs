@@ -6,12 +6,15 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { readFile, writeFile } from "node:fs/promises";
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+// toolsRoot: fuente color (assets/certs-src). repoRoot: salida blanca que usa
+// la web (img/certs).
+const toolsRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const repoRoot = path.resolve(toolsRoot, "..");
 
 const files = [
-  { in: "img/certs/iso-9001.png", out: "img/certs/iso-9001-white.png" },
-  { in: "img/certs/iso-20000.png", out: "img/certs/iso-20000-white.png" },
-  { in: "img/certs/iso-27001.png", out: "img/certs/iso-27001-white.png" },
+  { in: "assets/certs-src/iso-9001.png", out: "img/certs/iso-9001-white.png" },
+  { in: "assets/certs-src/iso-20000.png", out: "img/certs/iso-20000-white.png" },
+  { in: "assets/certs-src/iso-27001.png", out: "img/certs/iso-27001-white.png" },
 ];
 
 const T_LO = 110; // luminancia <= -> blanco opaco
@@ -22,7 +25,7 @@ const page = await browser.newPage();
 await page.goto("about:blank");
 
 for (const f of files) {
-  const b64 = (await readFile(path.join(root, f.in))).toString("base64");
+  const b64 = (await readFile(path.join(toolsRoot, f.in))).toString("base64");
   const src = `data:image/png;base64,${b64}`;
   const out = await page.evaluate(
     async (src, T_LO, T_HI) => {
@@ -59,7 +62,7 @@ for (const f of files) {
     T_LO,
     T_HI
   );
-  await writeFile(path.join(root, f.out), Buffer.from(out.split(",")[1], "base64"));
+  await writeFile(path.join(repoRoot, f.out), Buffer.from(out.split(",")[1], "base64"));
   console.log("wrote", f.out);
 }
 
